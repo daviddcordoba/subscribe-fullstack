@@ -26,21 +26,21 @@ const SubscribeForm = () => {
             email:""
         }
     })
-    useEffect(() => {
-        const fetchSubscriptionCount = async () => {
-          try {
-            const response = await fetch("http://localhost:5000/");
-            const data = await response.json();
-            if (response.ok) {
-                setSubscriptionCount(data.count);
-            } else {
-                console.log(data.error || "Error al obtener el contador.");
-            }
-          } catch (error) {
-            console.error("Error al obtener el contador de suscripciones:", error);
-            
+    const fetchSubscriptionCount = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/");
+        const data = await response.json();
+        if (response.ok) {
+            setSubscriptionCount(data.count);
+        } else {
+            console.log(data.error || "Error al obtener el contador.");
         }
-        };
+      } catch (error) {
+        console.error("Error al obtener el contador de suscripciones:", error);
+        
+    }
+    };
+    useEffect(() => {
     
         fetchSubscriptionCount();
       }, []);
@@ -62,19 +62,21 @@ const SubscribeForm = () => {
             if (response.ok) {
                 toast({
                     title:"¡Suscripción exitosa! Revisa tu correo.",
+                    className: "bg-gray-400 text-black"
                   })
+                  fetchSubscriptionCount()
             } else {
                 toast({
-                    variant: "destructive",
                     title: "Algo salió mal.",
                     description: data.error,
+                    className: "bg-red-600 text-white"
                   })
             }
 
             form.reset();
         }  catch (error) {
             toast({
-                variant: "destructive",
+                className: "bg-red-600 text-white",
                 title: "Hubo un problema al procesar la suscripción. Intenta nuevamente.",
             })
         }  finally{
