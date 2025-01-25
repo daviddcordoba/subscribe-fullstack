@@ -44,7 +44,7 @@ El proyecto está dividido en dos partes:
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/daviddcordoba/subscribe-fullstack.git
    cd tu-repositorio/backend
 2. Instala las dependencias del backend:
    ```bash
@@ -52,7 +52,7 @@ El proyecto está dividido en dos partes:
    npm run start
 - El servidor estará corriendo en http://localhost:5000.
 
-### Instalación del Frontend:
+### Instalación del Frontend (opcion para usar el entorno local):
 
 1. Dirígete a la carpeta del frontend:
    ```bash
@@ -64,10 +64,10 @@ El proyecto está dividido en dos partes:
    ```bash
    npm run start
 
-- El servidor estará corriendo en http://localhost:5173.
+- El servidor estará corriendo en http://localhost:5173 .
 
 ## Uso
-1. Accede al frontend en http://localhost:5173
+1. Accede al frontend en https://zippy-dango-d40027.netlify.app/ o http://localhost:5173
 2. Ingresa tu correo electrónico en el formulario y haz clic en "SUBSCRIBE".
 3. Si el correo es válido y no está previamente registrado, recibirás un correo de confirmación.
 
