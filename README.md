@@ -56,8 +56,8 @@ El proyecto está dividido en dos partes:
 
 1. Dirígete a la carpeta del frontend:
    ```bash
-   cd frontend
-2. Instala las dependencias del backend:
+   cd tu-repositorio/frontend
+2. Instala las dependencias del frontend:
    ```bash
    npm install
 3. Inicia el servidor
