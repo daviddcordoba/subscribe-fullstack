@@ -64,14 +64,14 @@ const SubscribeForm = () => {
                     title:"¡Suscripción exitosa! Revisa tu correo.",
                     className: "bg-gray-400 text-black"
                   })
-                  fetchSubscriptionCount()
-            } else {
-                toast({
-                    title: "Algo salió mal.",
-                    description: data.error,
-                    className: "bg-red-600 text-white"
-                  })
-            }
+                } else {
+                    toast({
+                        title: "Algo salió mal.",
+                        description: data.error,
+                        className: "bg-red-600 text-white"
+                    })
+                }
+                fetchSubscriptionCount()
 
             form.reset();
         }  catch (error) {
@@ -79,6 +79,7 @@ const SubscribeForm = () => {
                 className: "bg-red-600 text-white",
                 title: "Hubo un problema al procesar la suscripción. Intenta nuevamente.",
             })
+            fetchSubscriptionCount()
         }  finally{
           setIsLoading(false)
         }
