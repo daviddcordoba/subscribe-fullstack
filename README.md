@@ -13,7 +13,7 @@ El proyecto está dividido en dos partes:
 - Muestra un contador con el número de suscripciones.
 
 ### Backend (Express + Firebase)
-- Utiliza `Express` como servidor.
+- Utiliza `Express` en servidor.
 - Los correos electrónicos de los usuarios son almacenados en Firebase Firestore.
 - Utiliza `nodemailer` para enviar correos electrónicos a los usuarios al registrarse.
 - Gestiona las suscripciones y muestra un contador de los correos suscritos.
@@ -37,8 +37,8 @@ El proyecto está dividido en dos partes:
 ## Instalación y Uso
 
 ### Requisitos previos:
-- Tener `Node.js` instalado (se recomienda la versión LTS).
-- Tener `Firebase` configurado en tu proyecto.
+- Tener `Node.js` instalado.
+- Tener `Firebase` y `nodemailer` configurados en tu proyecto.
 
 ### Instalación del Backend:
 
